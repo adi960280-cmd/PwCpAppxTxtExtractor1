@@ -41,9 +41,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 
 # Bot credentials from environment variables (Render compatible)
-API_ID = int(os.environ.get("API_ID", 24473318))
-API_HASH = os.environ.get("API_HASH", "e7dd0576c5ac0ff8f90971d6bb04c8f5")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8034069514:AAHUBpzSCq41jPwsJkDbXuEoVC_yCxzyuw0")
+API_ID = int(os.environ.get("API_ID", 29978901))
+API_HASH = os.environ.get("API_HASH", "500fc876c5356cf04ed3698912dc2edf")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8484698189:AAHyW9gzYDP5WLQreUJ1IxTBh0Ia0dnqArE")
 
 # Initialize Bot Globally (IMPORTANT FIX)
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -75,7 +75,7 @@ async def start(bot, message):
 
   keyboard = [
     [
-      InlineKeyboardButton("🚀 Physics Wallah without Purchase 🚀", callback_data="pwwp")
+      InlineKeyboardButton("🚀 Pw hila hila ke pelo 🚀", callback_data="pwwp")
     ],
     [
       InlineKeyboardButton("📘 Classplus without Purchase 📘", callback_data="cpwp")
