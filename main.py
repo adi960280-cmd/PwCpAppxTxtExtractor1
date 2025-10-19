@@ -1,6 +1,17 @@
 import requests
 import asyncio
-asyncio.set_event_loop(asyncio.new_event_loop())
+import aiohttp
+
+async def fetch_pwwp_data(method, url, headers=None, params=None, data=None):
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.request(method, url, headers=headers, params=params, json=data) as response:
+                response.raise_for_status()
+                return await response.json()
+    except Exception as e:
+        print(f"❌ Error fetching {url}: {e}")
+        return None
+
 
 import asyncio
 import aiohttp
